@@ -4,7 +4,7 @@
 # @Author: Cheng Yili
 # @Date: 2019-08-28 21:58:49
 # @LastEditors: Cheng Yili
-# @LastEditTime: 2019-08-29 00:07:33
+# @LastEditTime: 2019-08-29 00:20:49
 # @Email: julywaltz77@hotmail.com
 
 import requests
@@ -20,7 +20,8 @@ head_row = [
     '岗位名称', '招聘公司', '公司类型', '公司规模', '工作地点', '岗位类型', '经验要求', '学历要求', '是否全职',
     '薪资待遇', '岗位链接', '岗位描述'
 ]
-with open('./zhilian/zhilian.csv', 'a', encoding='gbk', newline='') as csvfile:
+with open('./zhilian/zhilian.csv', 'a', encoding='utf8',
+          newline='') as csvfile:
     writer = csv.writer(csvfile)
     writer.writerow(head_row)
 url = 'https://fe-api.zhaopin.com/c/i/sou'
@@ -81,7 +82,7 @@ for i in range(1, 13):
             row.append(des_text)
         print(row)
     print('开始写入')
-    with open('./zhilian/zhilian.csv', 'a', encoding='gbk',
+    with open('./zhilian/zhilian.csv', 'a', encoding='utf8',
               newline='') as csvfile:
         writer = csv.writer(csvfile)
         for row in rows:
