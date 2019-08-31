@@ -4,7 +4,7 @@
 # @Author: Cheng Yili
 # @Date: 2019-08-24 21:14:35
 # @LastEditors: Cheng Yili
-# @LastEditTime: 2019-08-24 23:59:11
+# @LastEditTime: 2019-08-31 19:42:05
 # @Email: julywaltz77@hotmail.com
 
 import requests
@@ -72,5 +72,5 @@ def main_program():
     print('写入结束')
 
 
-if __name__ = 'main':
+if __name__ == 'main':
     main_program()
